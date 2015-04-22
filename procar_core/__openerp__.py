@@ -19,18 +19,24 @@
 #
 ##############################################################################
 
-from openerp.osv import fields
-from openerp.osv.orm import Model
 
-
-class product_product(Model):
-    _name = 'product.product'
-    _inherit = 'product.product'
-    _columns = {
-        'mid': fields.char('Migration ID', size=128,
-                            select=1, help='Format "concept.table,id". Ex: Hotel.ProductHotel,23'),
-    }
-
-
-
-
+{
+    'name': 'Procar Travel Core',
+    'version': '1.0',
+    "author": "OpenJAF",
+    "website": "http://www.openjaf.com",
+    'category': '?',
+    'depends': ['trave_core'],
+    'data': [
+        'view/sale.xml',
+    ],
+    "description": """ Customization  travel_core module to Procar.""",
+    'init_xml': ['data/load_data.xml'],
+    'update_xml': [],
+    'demo_xml': [],
+    'test': [],
+    'installable': True,
+    'active': False,
+    #'certificate': '0071515601309',
+}
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

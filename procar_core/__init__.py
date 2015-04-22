@@ -19,18 +19,4 @@
 #
 ##############################################################################
 
-from openerp.osv import fields
-from openerp.osv.orm import Model
-
-
-class product_product(Model):
-    _name = 'product.product'
-    _inherit = 'product.product'
-    _columns = {
-        'mid': fields.char('Migration ID', size=128,
-                            select=1, help='Format "concept.table,id". Ex: Hotel.ProductHotel,23'),
-    }
-
-
-
 
