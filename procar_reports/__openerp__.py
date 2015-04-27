@@ -21,16 +21,16 @@
 
 
 {
-    'name': 'Procar Travel Core',
+    'name': 'Procar custom reports',
     'version': '1.0',
     "author": "OpenJAF",
     "website": "http://www.openjaf.com",
     'category': '?',
-    'depends': ['sale', 'contacts', 'report_aeroo'],
+    'depends': ['sale'],
     'data': [
-        'view/sale.xml',
+        'view/report_saleorder.xml',
     ],
-    "description": """ Customisation  travel_core module to Procar.""",
+    "description": """ Customisation  reports to Procar.""",
     'installable': True,
     #'certificate': '0071515601309',
 }

@@ -20,20 +20,3 @@
 ##############################################################################
 
 
-{
-    'name': 'Procar Travel Core',
-    'version': '1.0',
-    "author": "OpenJAF",
-    "website": "http://www.openjaf.com",
-    'category': '?',
-    'depends': ['sale', 'contacts', 'report_aeroo'],
-    'data': [
-        'view/sale.xml',
-    ],
-    "description": """ Customisation  travel_core module to Procar.""",
-    'installable': True,
-    #'certificate': '0071515601309',
-}
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
-
-

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+		<template id="report_selaorder_document_inherit" inherit_id="sale.report_saleorder_document">
+			<xpath expr="//table[@class='table table-condensed']/thead/tr" position="replace">
+				<tr>
+	                <th>Description</th>
+	                <th class="text-right">Quantity</th>
+	                <th class="text-right">Cost Price</th>
+	                <th class="text-right">Sale Price</th>
+	                <th groups="sale.group_discount_per_so_line">Disc.(%)</th>
+	                <th class="text-right">Price</th>
+	            </tr>
+            </xpath>
+            
+            <xpath expr="//table/tbody[@class='sale_tbody']" position="replace">
+            	<tbody class="sale_tbody">
+                    <tr t-foreach="o.order_line" t-as="l">
+                        <td>
+                           <span t-field="l.name"/>
+                           <span t-if="l.category=='hotel'">
+                           	   <span>     Plan: </span><span t-field="l.hotel_2_meal_plan_id"/>
+                           	   <span t-field="l.start_date"/><span> - </span><span t-field="l.end_date"/>
+                           	   
+                           	   <table class="table">
+	                           	   <thead>
+		                           	   <tr>
+							                <th>Room</th>
+							                <th class="text-right">Adults</th>
+							                <th class="text-right">Children</th>
+							                <th class="text-right">Qty</th>
+							            </tr>
+						            </thead>
+						            <tbody class="hotel_tbody">
+							            <tr t-foreach="l.sale_context_id.hotel_1_rooming_ids" t-as="r">
+								            <td>
+					                           <span t-field="r.room_type_id"/>
+					                        </td>
+					                        <td class="text-right">
+					                           <span t-field="r.adults"/>
+					                        </td>
+					                        <td class="text-right">
+					                           <span t-field="r.children"/>
+					                        </td>
+					                        <td class="text-right">
+					                            <span t-field="r.quantity"/>
+					                        </td>
+							            </tr>
+						            </tbody> 
+					            </table>    
+                           </span>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="l.product_uom_qty"/>
+                            <span groups="product.group_uom" t-field="l.product_uom"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="l.price_unit"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="l.price_unit_cost"/>
+                        </td>
+                        <td groups="sale.group_discount_per_so_line">
+                            <span t-field="l.discount"/>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="l.price_subtotal"
+                                t-field-options='{"widget": "monetary", "display_currency": "o.pricelist_id.currency_id"}'/>
+                        </td>
+                    </tr>
+                </tbody>
+            </xpath>
+            
+		</template> 
+    </data>
+</openerp>
