@@ -8,8 +8,11 @@
 		<div data-oe-id="318" data-oe-source-id="288" data-oe-xpath="/data/xpath/div[1]" data-oe-model="ir.ui.view" data-oe-field="arch">
       <section class="mt0 oe_img_bg mb0" style="overflow: hidden; background-repeat: no-repeat; height: 504px; background-image: url(&quot;/custom_theme/static/src/img/banner01.jpg&quot;);">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12 mb128 mt64"></div>
+    	  <div class="row">
+            <div class="col-md-12">
+            	<p class="sld_description">Cloud solution</p>
+				<p class="sld_sub_description">Manage sales and invoicing in travel services</p>
+            </div>
           </div>
         </div>
       </section>
@@ -30,8 +33,50 @@
             <div class="col-md-4 text-center">
               <span class="fa fa-lock fa-5x"></span>
               <h3 class="mt8 mb0">Contact Control</h3>
-              <div class="text-muted">Write what the customer would like to know,</div>
-              <div class="text-muted">not what you want to show.</div>
+              <div class="text-muted">Control all contact data suppliers and customers</div>
+              <div class="text-muted">working with the agency.</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <span class="fa fa-heart fa-5x"></span>
+              <h3 class="mt8 mb0">Third Feature</h3>
+              <div class="text-muted">A small explanation of this great</div>
+              <div class="text-muted">feature, in clear words.</div>
+            </div>
+          </div>
+          <div class="row mt16 mb16">
+            <div class="col-md-4 text-center">
+              <span class="fa fa-suitcase fa-5x"></span>
+              <h3 class="mt8 mb0">Manage catalog</h3>
+              <div class="text-muted">Manage catalog of tourist products</div>
+              <div class="text-muted">Hotels, Cars, Transfers, Flights,</div>
+               <div class="text-muted">Activities and Packages.</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <span class="fa fa-lock fa-5x"></span>
+              <h3 class="mt8 mb0">Contact Control</h3>
+              <div class="text-muted">Control all contact data suppliers and customers</div>
+              <div class="text-muted">working with the agency.</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <span class="fa fa-heart fa-5x"></span>
+              <h3 class="mt8 mb0">Third Feature</h3>
+              <div class="text-muted">A small explanation of this great</div>
+              <div class="text-muted">feature, in clear words.</div>
+            </div>
+          </div>
+          <div class="row mt16 mb16">
+            <div class="col-md-4 text-center">
+              <span class="fa fa-suitcase fa-5x"></span>
+              <h3 class="mt8 mb0">Manage catalog</h3>
+              <div class="text-muted">Manage catalog of tourist products</div>
+              <div class="text-muted">Hotels, Cars, Transfers, Flights,</div>
+               <div class="text-muted">Activities and Packages.</div>
+            </div>
+            <div class="col-md-4 text-center">
+              <span class="fa fa-lock fa-5x"></span>
+              <h3 class="mt8 mb0">Contact Control</h3>
+              <div class="text-muted">Control all contact data suppliers and customers</div>
+              <div class="text-muted">working with the agency.</div>
             </div>
             <div class="col-md-4 text-center">
               <span class="fa fa-heart fa-5x"></span>
@@ -256,7 +301,7 @@
                     <div class="copyright-text">
                         <p> 2015  - developed and                       
                             <a href="#">Designed by</a>                             
-                            <a href="#">OpenJAF</a>
+                            <a href="#">Comely</a>
                         </p>
                     </div>
                 </div>
@@ -272,7 +317,6 @@
                             <li>
                                 <a title="About Us" href="#">
                                     <i class="icon icon-angle-right"></i>About Us
-                                
                                 </a>
                             </li>
                            
@@ -282,7 +326,6 @@
                             <li class=" last">
                                 <a title="Contact Us" href="#">
                                     <i class="icon icon-angle-right"></i>Contact Us
-                                
                                 </a>
                             </li>
                         </ul>
@@ -290,13 +333,6 @@
                 </div>
             </div>
         </section>
-	 </xpath>
-	 <xpath expr="//div[@id='wrapwrap']/header" position="before">
-	 <div class="clearfix" id="topbar" data-oe-id="769" data-oe-model="ir.ui.view" data-oe-field="arch" data-oe-xpath="/t[1]/html[1]/body[1]/div[1]/div[1]">
-	 <div class="container">
-	 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-	 </div><div class="col-lg-8 col-md-8 col-sm-8 col-xs-12"><div class="topmenu"><span class="topbar-login"><a href="#">Login / Register</a></span><span class="topbar-cart"><a href="#">0 item - <span class="price">£0.00</span> </a></span></div><div class="callus"><span class="topbar-phone"> welcome Guest!
-	 </span></div></div></div></div>
 	 </xpath>
 	 </template>
 <template id="website.layout_logo_show" inherit_id="website.layout" customize_show="True" name="Show Logo">
