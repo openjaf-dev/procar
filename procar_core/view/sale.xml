@@ -5,14 +5,14 @@
        
         <record id="procar_travel_sale_order_form_view" model="ir.ui.view">
             <field name="name">procar.travel.sale.order.form.view</field>
-            <field name="model">sale.order</field>
+            <field name="model">sale.order</field>	
             <field name="inherit_id" ref="travel_core.travel_sale_order_form_view"/>
             <field name="arch" type="xml">
             <data>
             	<field name="price_unit" position="replace">
             		<field name="price_unit" string="Price Sale"/>
             	</field>
-	            <field name="price_unit" position="after">
+	            	 <field name="price_unit" position="before">
 		             <field name="price_unit_cost" string="Price Cost"/>
 		        </field>
             </data>
