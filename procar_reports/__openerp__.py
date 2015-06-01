@@ -28,6 +28,8 @@
     'category': '?',
     'depends': ['sale'],
     'data': [
+        'procar_report.xml',
+        'view/so_procar_report.xml',
         'view/report_saleorder.xml',
     ],
     "description": """ Customisation  reports to Procar.""",

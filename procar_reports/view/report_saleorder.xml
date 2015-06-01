@@ -6,10 +6,9 @@
 				<tr>
 	                <th>Description</th>
 	                <th class="text-right">Quantity</th>
-	                <th class="text-right">Cost Price</th>
-	                <th class="text-right">Sale Price</th>
-	                <th groups="sale.group_discount_per_so_line">Disc.(%)</th>
 	                <th class="text-right">Price</th>
+	                <th groups="sale.group_discount_per_so_line">Disc.(%)</th>
+	                <th class="text-right">SubTotal</th>
 	            </tr>
             </xpath>
             
@@ -28,7 +27,6 @@
 							                <th>Room</th>
 							                <th class="text-right">Adults</th>
 							                <th class="text-right">Children</th>
-							                <th class="text-right">Qty</th>
 							            </tr>
 						            </thead>
 						            <tbody class="hotel_tbody">
@@ -42,13 +40,14 @@
 					                        <td class="text-right">
 					                           <span t-field="r.children"/>
 					                        </td>
-					                        <td class="text-right">
-					                            <span t-field="r.quantity"/>
-					                        </td>
+							            </tr>
+							            <tr>
 							            </tr>
 						            </tbody> 
 					            </table>    
                            </span>
+                           <span>Note: </span>
+                           <span t-field="l.description"/>
                         </td>
                         <td class="text-right">
                             <span t-field="l.product_uom_qty"/>
@@ -56,9 +55,6 @@
                         </td>
                         <td class="text-right">
                             <span t-field="l.price_unit"/>
-                        </td>
-                        <td class="text-right">
-                            <span t-field="l.price_unit_cost"/>
                         </td>
                         <td groups="sale.group_discount_per_so_line">
                             <span t-field="l.discount"/>
